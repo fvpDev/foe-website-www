@@ -17,7 +17,10 @@ module.exports = {
       'y': { 'raw': '(orientation: portrait), (max-width: 900px)' },
       'x': { 'raw': '(orientation: landscape) and (min-width: 901px)' },
     },
-    // fontFamily: { 'fontname': ['FontName', 'sans-serif'] },
+    fontFamily: {
+      'boucherie-block': ['Boucherie Block', 'sans-serif'],
+      'open-sans': ['Open Sans', 'sans-serif'],
+    },
     extend: {
       /* Typography */
       lineHeight: {

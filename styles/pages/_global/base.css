@@ -1,0 +1,11 @@
+@layer base {
+  html { @apply leading-normal }
+  body {
+    @apply font-open-sans;
+    @apply tracking-normal;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-boucherie-block;
+    @apply leading-normal;
+  }
+}

@@ -1,24 +1,6 @@
-@tailwind base;
-@layer base {
-  html { @apply leading-normal }
-  body {
-    /* @apply font-[fontname]; */
-    @apply tracking-normal;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    /* @apply font-[fontname]; */
-    @apply leading-normal;
-  }
-}
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
-
-/* @import './fonts/[fontname].css'; */
-
-@import './pages/_global.css';
-/* @import './pages/_layout.css'; */
-@import './pages/00-landing.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import './device/phone.css';
 @import './device/tablet-portrait.css';
@@ -26,3 +8,12 @@
 @import './device/desktop.css';
 @import './device/desktop-big.css';
 @import './device/desktop-wide.css';
+
+@import './fonts/boucherie-block.css';
+@import './fonts/open-sans.css';
+
+@import './pages/_global/base.css';
+@import './pages/_global/components.css';
+@import './pages/_global/utilities.css';
+/* @import './pages/_layout.css'; */
+@import './pages/00-landing.css';

@@ -1,0 +1,16 @@
+/* Global */
+
+/* Google reCaptcha */
+.grecaptcha-badge { @apply z-100 opacity-50 }
+
+/* Core: Slider */
+@layer components {
+  .slider {
+    & .gate .reel {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      &::-webkit-scrollbar { @apply hidden }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+/* Global */
+
+/* Core: Edge Shadows for Scrolling */
+@layer utilities {
+  .edge-shadow {
+    &-x, &-y {
+      &::before, &::after { @apply absolute z-50; content: ''; }
+    }
+    &-x {
+      &::before, &::after { @apply top-0 bottom-0 w-10 h-full }
+      &::before { @apply left-0 }
+      &::after { @apply right-0 }
+      &:not(.at-start)::before { background: linear-gradient(90deg, black, rgba(0, 0, 0, 0%)); }
+      &:not(.at-end)::after { background: linear-gradient(270deg, black, rgba(0, 0, 0, 0%)); }
+    }
+    &-y {
+      &::before, &::after { @apply left-0 right-0 w-full h-10 }
+      &::before { @apply top-0 }
+      &::after { @apply bottom-0 }
+      &:not(.at-start)::before { background: linear-gradient(180deg, black, rgba(0, 0, 0, 0%)); }
+      &:not(.at-end)::after { background: linear-gradient(0deg, black, rgba(0, 0, 0, 0%)); }
+    }
+  }
+}
+
+/** --- Brand --- **/
+
+/* Borders */
+@layer utilities {
+  .border-tc-gold {
+    @apply border-solid;
+    border-image-slice: 1;
+    border-image-source: -moz-radial-gradient(circle, rgba(255,251,204,1) 0%, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+    border-image-source: -webkit-radial-gradient(circle, rgba(255,251,204,1) 0%, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+    border-image-source: radial-gradient(circle, rgba(255,251,204,1) 0%, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+  }
+}
+
+/* Backgrounds */
+@layer utilities {
+  .tc-bg-gold {
+    background-image: -moz-radial-gradient(circle, rgba(255,251,204,1) 0%, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+    background-image: -webkit-radial-gradient(circle, rgba(255,251,204,1) 0%, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+    background-image: radial-gradient(circle, rgba(255,251,204,1) 0%, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+  }
+}
+@layer utilities {
+  .tc-bg-helmets {
+    @screen x { background: 8.8rem center/32rem 29rem url(/img/bg/tc-bg-helmets.png); }
+    @screen y { background: 4.4rem 10.6rem/51.2rem 46.4rem url(/img/bg/tc-bg-helmets.png); }
+  }
+}
+@layer utilities {
+  .tc-bg-nav_menu { background: no-repeat top center/100% 50% linear-gradient(0deg, white, white), no-repeat bottom center/100% auto url(/img/bg/tc-bg-nav_menu.png); }
+}
+
+/* Translucent Storm Background */
+@layer utilities {
+  .tc-bg-storm-50 {
+    @screen x { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-1920x1080.webp); }
+    @screen phone-4/3 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-600x800.webp); }
+    @screen phone-3/2 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-600x900.webp); }
+    @screen phone-16/10 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-600x960.webp); }
+    @screen phone-5/3 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-600x1000.webp); }
+    @screen phone-16/9 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-600x1067.webp); }
+    @screen phone-tall { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-600x1350.webp); }
+    @screen tablet-portrait-4/3 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-900x1200.webp); }
+    @screen tablet-portrait-3/2 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-900x1350.webp); }
+    @screen tablet-portrait-16/10 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-900x1440.webp); }
+    @screen tablet-portrait-5/3 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-900x1500.webp); }
+    @screen tablet-portrait-16/9 { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-900x1600.webp); }
+    @screen tablet-portrait-tall { background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), no-repeat center/cover url(/img/bg/tc-bg-storm-900x2025.webp); }
+  }
+}
+
+/* Animated Underlines */
+@layer utilities {
+  .tc-animated-underline {
+    &-white, &-gold {
+      &::after {
+        @apply block relative top-px w-0 h-px transition-all ease-in duration-150;
+        content: '';
+      }
+      &.active::after, &:hover::after { @apply w-full }
+      &.under-2::after { top: 2px; height: 2px; }
+      &.under-left::after, &.under-middle::after { @apply mr-auto }
+      &.under-right::after, &.under-middle::after { @apply ml-auto }
+    }
+    &-white::after { @apply bg-white }
+    &-gold::after {
+      background-image: -moz-radial-gradient(circle, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+      background-image: -webkit-radial-gradient(circle, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+      background-image: radial-gradient(circle, rgba(238,214,136,1) 37%, rgba(235,187,16,1) 68.5%, rgba(195,146,46,1) 100%);
+    }
+  }
+}

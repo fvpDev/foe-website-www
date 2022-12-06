@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Boucherie Block';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Boucherie Block'), local('BoucherieBlock'), url(/fonts/boucherie-block/BoucherieBlock.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Boucherie Block';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Boucherie Block Italic'), local('BoucherieBlock-Italic'), url(/fonts/boucherie-block/BoucherieBlock-Italic.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Boucherie Block';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Boucherie Block'), local('BoucherieBlock-Bold'), url(/fonts/boucherie-block/BoucherieBlock-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Boucherie Block';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Boucherie Block Bold Italic'), local('BoucherieBlock-BoldItalic'), url(/fonts/boucherie-block/BoucherieBlock-BoldItalic.otf) format('opentype');
+}
