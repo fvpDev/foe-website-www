@@ -20,6 +20,10 @@
 
 ---
 
+## 0.0.3 - Add OpenGraph image
+- constants/site.js version bump
+- package.json version bump
+
 ## 0.0.2 - Add Brand, Fonts, Landing Page
 - constants/site.js version bump
 - package.json version bump

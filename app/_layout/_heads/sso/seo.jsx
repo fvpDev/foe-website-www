@@ -17,7 +17,7 @@ export default function SEOHead({
   return (
     <Head>
       <title>{!!title ? title : (isHome
-        ? `${BRAND_NAME} ${titleDivider} ${BRAND_TAGLINE}`
+        ? BRAND_NAME + (BRAND_TAGLINE ? ` ${titleDivider} ${BRAND_TAGLINE}` : '')
         : `${page}${!!subPage ? ` ${pageDivider} ${subPage}` : ''} ${titleDivider} ${BRAND_NAME}`)
       }</title>
       <meta name="description" content={description} />

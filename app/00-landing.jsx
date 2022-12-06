@@ -5,6 +5,7 @@ import LINKSHead from '@Heads/links'
 import SEOHead from '@Heads/sso/seo'
 import SMOHead from '@Heads/sso/smo'
 
+import { SOCIAL_MEDIA_FB_USERNAME } from '@Constants/social-media'
 import Layout from '@Layout'
 import Main from '@Layout/02_main'
 
@@ -12,8 +13,8 @@ export default function Landing() {
   const router = useRouter()
   return (
     <>
-      <SEOHead page="Coming Soon!" />
-      <SMOHead page="Coming Soon!" path={router.pathname} />
+      <SEOHead isHome={true} />
+      <SMOHead isHome={true} path={router.pathname} />
       <LINKSHead />
 
       <Layout>
@@ -32,7 +33,7 @@ export default function Landing() {
             </h1>
             <p>
               Until we have a website, follow us on
-              <br className="x:hidden" />{' '}Facebook to keep up to date
+              <br className="x:hidden" />{' '}<a className="underline" href={`https://www.facebook.com/${SOCIAL_MEDIA_FB_USERNAME}`} target="_blank">Facebook</a> to keep up to date
               <br className="y:hidden" />{' '}on various
               <br className="x:hidden" />{' '}events, menus, and announcements!
             </p>
